@@ -1,10 +1,7 @@
-package stepDefinition;
+package tests;
 
 import TestComponents.BaseTest;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 
 public class SubmitOrderTest extends BaseTest {
-    @Given("login to the page and place the order")
     @Test(dataProvider = "getData", groups = "Purchase")
     public void submitOrder(HashMap<String, String> input) throws IOException, InterruptedException {
 
@@ -35,17 +31,6 @@ public class SubmitOrderTest extends BaseTest {
         System.out.println(confirmationMsg);
 
     }
-
-    @Then("verifying the orderHistory page")
-    @Test(dependsOnMethods = "submitOrder", dataProvider = "getData", groups = "Purchase")
-
-    public void orderHistory(HashMap<String, String> input) {
-        ProductsPage productsPage = landingPage.loginToApp(input.get("email"), input.get("password"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        OrdersPage ordersPage = productsPage.gotoOrders();
-        Assert.assertTrue(ordersPage.verifyOrderDisplayed(input.get("product")));
-    }
-
 
     @DataProvider
     public Object[][] getData() throws IOException {

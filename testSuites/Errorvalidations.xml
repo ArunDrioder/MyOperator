@@ -18,7 +18,7 @@
     <test name="Error Validations Test">
 
         <classes>
-            <class name="stepDefinition.ErrorValidations"/>
+            <class name="tests.ErrorValidations"/>
         </classes>
     </test>
 </suite>

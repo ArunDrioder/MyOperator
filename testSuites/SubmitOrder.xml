@@ -15,7 +15,7 @@
     </listeners>
    <test name="Submit Order">
        <classes>
-           <class name="stepDefinition.SubmitOrderTest"/>
+           <class name="tests.SubmitOrderTest"/>
 
        </classes>
    </test>
