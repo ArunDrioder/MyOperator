@@ -62,7 +62,7 @@ public class stepDefinitionImplementation extends BaseTest
         driver.close();
     }
 
-    @Then("^\"([^\"]*)\" message is displayed$")
+    @Then("^(.+) message is displayed$")
     public void something_message_is_displayed(String strArg1) throws Throwable {
 
         Assert.assertEquals(strArg1, landingPage.getErrorMessage());

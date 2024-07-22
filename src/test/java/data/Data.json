@@ -40,7 +40,7 @@
   },
   {"email" : "1234@5841",
     "password":"sdsd2354",
-    "expectedMessage" : "Incorrect email or password"
+    "expectedMessage" : "Incorrect email or password."
   },
   {"email" : "sgdsjgsj@687346386",
     "password":"dfghj@!234",
